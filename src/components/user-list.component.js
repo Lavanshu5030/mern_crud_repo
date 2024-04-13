@@ -1,17 +1,9 @@
 //src/Components/User-list.component.js
-import React,
-{
-	useState,
-	useEffect
-} from "react";
-import axios
-	from "axios";
-import { Table }
-	from "react-bootstrap";
-import UserTableRow
-	from "./UserTableRow";
-// import { Link }
-// 	from "react-router-dom";
+import React,{useState,useEffect} from "react";
+import axios from "axios";
+import { Table } from "react-bootstrap";
+import UserTableRow from "./UserTableRow";
+
 
 const UserList = () => {
 	const [Users, setUsers] = useState([]);
@@ -44,30 +36,9 @@ const UserList = () => {
 						<th>Email</th>
 						<th>Image</th>
 						<th>Action</th>
-						{/* <th>Password</th> */}
-						
 					</tr>
 				</thead>
 				<tbody>{DataTable()}</tbody>
-				{/* <tbody>
-					{Users.map((user) => (
-						<tr key={user.id}>
-							<td>{user.id}</td>
-							<td>{user.name}</td>
-							<td>{user.email}</td>
-							<td><img src={user.imageUrl} alt={user.name} /></td>
-						
-							<td>
-								
-								<Link className="edit-link"
-									to={"/edit-User/" + id}>
-									Edit
-								</Link>
-					
-							</td>
-						</tr>
-					))}
-				</tbody> */}
 			</Table>
 		</div>
 	);
